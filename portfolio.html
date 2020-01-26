@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wes Hightower //Portfolio</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Istok+Web|Varela' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div id="blackout">
+		<div id="imageHolder">
+			<!-- Design / Photog -->
+			<img src="images/logo.png" id="currentImage" onload="return respondImage()"/>
+			<!-- Design / Photog -- END -->
+			
+			<!-- Video -->
+			<video id="currentVideo" onload="return respondImage()">
+				<source id="mp4Src" src="#" type="video/mp4" onload="return respondImage()">
+				<!-- <source src="#" type="video/ogg" onload="return respondImage()"> -->
+				Your browser does not support the video tag.
+			</video>
+			<a href="#" id="movieControl" onclick="return playVid(i)">
+				<img src="stock/images/play.png" id="playerButton" />
+			</a>
+			
+			<!-- Video -- END -->
+
+			<!-- Interactive -->
+				<div id="currentInteractiveHolder">
+					<iframe src="#" id="currentInteractive" width="560" height="320" onload="return respondImage()"></iframe>
+				</div>
+			<!-- Interactive -- END -->
+			
+			<div id="loading">
+				<img src="images/loading.gif">
+				<br />
+				Loading
+			</div>
+			<span id="caption">Caption</span>
+			<span id="imageCounter"># of #</span>
+			<a href="#" id="prev" onclick="prevPic()">Previous</a>
+			<a href="#" id="next" onclick="nextPic()">Next</a>
+			<span id="exit" onclick="closeGallery()">X</span>
+		</div> <!-- /#imageHolder -->
+		
+	</div> <!-- /#blackout -->
+
+	<div id="navHolder">
+		<div id="navigation">
+			<a href="index.html">
+				<div id="logo">
+				</div> <!-- /#logo -->			
+			</a>
+			<nav id="mainNav">
+				<a href="about.html" id="navAbout" class="navLink">
+					About
+				</a>
+	  			<a href="portfolio.html" id="navPortfolio" class="navLink currentPage">
+	  				Portfolio
+	  			</a>
+				<a href="resume.html" id="navResume" class="navLink">
+					Resume
+				</a>
+				<a href="contact.php" id="navContact" class="navLink">
+					Contact
+				</a>
+			</nav> <!-- /#mainNav -->
+		</div> <!-- /#navigation -->
+	</div> <!-- /#navHolder -->
+	
+	<div id="subNavHolder">
+		<div id="subNav">
+			<nav id="subNavLinks">
+				<a href ="#" id="designLink" class="subLink" onclick="return showDesign()" alt="View the Design gallery." title="View the Design gallery.">
+					Design
+				</a>
+				<a href="#" id="photographyLink" class="subLink" onclick="return showPhotography()" alt="View the Photography gallery." title="View the Photography gallery.">
+					Photography
+				</a>
+				<a href="#" id="audioLink" class="subLink" onclick="return showAudio()" alt="Listen to the Audio gallery." title="Listen to the Audio gallery.">
+					Audio
+				</a>
+				<a href="#" id="videoLink" class="subLink" onclick="return showVideo()" alt="Watch the Video gallery." title="Watch the Video gallery.">
+					Video
+				</a>
+				<a href="#" id="interactiveLink" class="subLink" onclick="return showInteractive()" alt="Play with the Interactive gallery." title="Play with the Interactive gallery.">
+					Interactive
+				</a>
+			</nav> <!-- /#subNavLinks -->
+		</div> <!-- /#subNav -->
+	</div> <!-- /#subNavHolder -->
+	
+	<div id="headHolder">
+		<div id="header">
+			<img src="images/headImage.png" class="homeSlide"/>
+			<h1 id="homeHead">
+				Portfolio
+			</h1>
+		</div> <!-- /#header -->
+	</div> <!-- /#headHolder -->
+	
+	<div id="contentHolder">
+		<div id="content">
+			<h2 id="explanation">
+				Portfolio
+			</h2> <!-- /#explanation -->
+
+			<div id="thumbs">
+				<a href="#" onclick="return showDesign()" alt="View the Design gallery" title="View the Design gallery">
+					<div class="thumbNail designMain">
+						Design
+					</div>
+				</a>
+				
+				<a href="#" onclick="return showPhotography()" alt="View the Photography gallery" title="View the Photography gallery">
+					<div class="thumbNail photogMain">
+						Photography
+					</div>
+				</a>
+				
+				<a href="#" onclick="return showAudio()" alt="Listen to the Audio gallery" title="Listen to the Audio gallery">
+					<div class="thumbNail audioMain">
+						Audio
+					</div>
+				</a>
+				
+				<a href="#" onclick="return showVideo()" alt="Watch the Video gallery" title="Watch the Video gallery">
+					<div class="thumbNail videoMain">
+						Video
+					</div>
+				</a>
+				
+				<a href="#" onclick="return showInteractive()" alt="Play with the Interactive gallery" title="Play with the Interactive gallery">
+					<div class="thumbNail interactiveMain">
+						Interactive				
+					</div>
+				</a>
+				
+			</div> <!-- #thumbs -->
+			
+		</div> <!-- /#content -->
+	</div> <!-- /#contentHolder -->
+	
+	<div id="footHolder">
+		<div id="footer">
+			<span id="copyright">
+				&copy; Wes Hightower 2016
+			</span>
+			
+			<ul id="footLinks">
+				<li>
+					<a href="https://www.linkedin.com/in/wes-hightower-17682562?trk=nav_responsive_tab_profile" target="_blank">
+						<img src="images/linkedin.png" alt="Linked In" title="Linked In" />
+					</a>
+				</li>
+				
+				<li>
+					<a href="https://www.facebook.com/wes.hightower.3" target="_blank">
+						<img src="images/fb-art.jpg" alt="Facebook" title="Facebook" />
+					</a>
+				</li>
+				
+			</ul> <!-- /#footLinks -->
+		</div> <!-- /#footer -->
+	</div> <!-- /#footHolder -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="ga.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="portfolio.js"></script>
+</body>
+</html>
